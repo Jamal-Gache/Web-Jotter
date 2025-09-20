@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Web Jotter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="popup.js" defer></script>
+</head>
+
+<body>
+    <div id="popup-container">
+
+         <!-- Heading -->
+        <div class="header-section">
+            <h1 class="header">Web Jotter</h1> 
+            <h2 class="center-shadow tagline">Tabs spinning out? Jot em before they skitter away...</h2>
+            <hr class="tagline-separator" />
+        </div>
+
+        <!-- Feature tabs -->
+        <div class="feature-tabs" role="tablist" aria-label="Select Web-Jotter feature">
+            <button class="tab" role="tab" aria-selected="false" data-view="highlights">Highlights</button>
+            <button class="tab active" role="tab" aria-selected="true" data-view="sessions">Sessions</button>
+        </div>
+
+        <!-- View: Highlights (Highlight Saver) -->
+        <section id="view-highlights" class="view is-hidden">
+            <div class="controls">
+            <textarea id="highlightInput" class="hl-input" rows="4" placeholder="Paste or jot a highlight…"></textarea>
+            </div>
+            <div class="controls">
+            <button id="saveHighlightBtn" title="Save this highlight">Save Highlight</button>
+            </div>
+            <ul id="highlightList" class="session-list" aria-label="Saved highlights"></ul>
+        </section>
+    
+        <!-- View: Sessions (Tab Saver) -->
+        <section id="view-sessions" class="view">
+            <div class="controls">
+            <button id="saveSessionBtn" title="Save all tabs in this window">Save Tabs</button>
+            </div>
+            <ul id="sessionList" class="session-list" aria-label="Saved sessions"></ul>
+        </section>
+
+        <div class="header-wrap">
+            <img
+                src="spider_mascot.png"
+                class="spider-mascot"
+                alt="Spider mascot"
+                title="spider_mascot"
+            />
+        </div>
+    </div>
+</body>
+</html>

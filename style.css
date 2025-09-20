@@ -1,0 +1,183 @@
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+    body {
+        font-family: 'Bangers', cursive, sans-serif;
+        min-width: 320px;
+        background: #db8f8f; /* fallback bg, container overrides */
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Popup container (rounded card look) */
+    #popup-container {
+        background: #e38b8f;
+        border: 3px solid rgb(54, 2, 2);
+        border-radius: 5x;
+        box-sizing: border-box;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        padding: 0;
+    }
+
+    /* Header section with darker bg */
+    .header-section {
+        background: #c57376;
+        text-align: center;
+        padding: 10px 12px 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: relative;
+    }
+
+    /* Title */
+    h1.header {
+        text-decoration: underline;
+        font-family: 'Bangers', sans-serif;
+        text-align: center;
+        color: #a30a19;
+        margin: 0 0 12px 0;
+        font-size: 2.5em;
+        font-weight: normal;
+    }
+
+    /* Tagline */
+    h2.center-shadow,
+    p.center-shadow {
+        color: #201f1f;
+        text-align: center;
+        text-shadow: 2px 2px 6px rgba(123, 84, 84, 0.533);
+        margin: 0 0 10px 0;
+    }
+
+    /* Separator under tagline */
+    .tagline-separator {
+        border: none;
+        border-top: 1px solid #3a3939;
+        margin: 6px 12px 12px;
+    }
+
+    /* Mascot pinned top-right */
+    .spider-mascot {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.45));
+        user-select: none;
+    }
+
+    /* Controls */
+    .controls { display: flex; justify-content: center; margin: 8px 12px 4px; }
+    .controls button {
+        background: #ff6f7d; color: #201f1f; border-radius: 8px;
+        padding: 8px 12px; font-weight: 600; cursor: pointer;
+        border: 1px solid #ff6f7d;
+        box-shadow: 0 0 0 1px rgba(54, 45, 45, 0.35);
+    }
+    .controls button:hover {
+        filter: brightness(1.05);
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.65);
+    }
+
+    /* Heading above dropdown list */
+    .tab-section-title {
+        text-align: center;
+        text-decoration: underline;
+        font-weight: 700;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    /* Session List */
+    .session-list { list-style: none; margin: 12px; padding: 0; display: grid; gap: 8px; }
+    .session-item {
+        background: #2a2929; border: 1px solid #3a3939; border-radius: 10px; padding: 10px;
+    }
+
+    /* header row with toggle caret + title */
+    .session-header { display: flex; align-items: center; gap: 8px; }
+    .session-toggle {
+        width: 28px; height: 28px; border-radius: 6px; border: 1px solid #555;
+        background: #1f1f1f; color: #fff; cursor: pointer; line-height: 1;
+    }
+    .session-toggle:hover { background: #2b2b2b; }
+    .session-title { font-size: 1rem; margin: 0; color: #fff; }
+
+    /* Legacy */
+    .session-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .session-meta { font-size: 0.8rem; color: #cfcfcf; }
+
+    /* Session Actions */
+    .session-actions { display: flex; gap: 6px; justify-content: center; }
+    .session-actions button {
+        background: transparent; color: #ff6f7d; border-radius: 8px; padding: 6px 10px; cursor: pointer;
+        border: 1px solid #ff6f7d;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.35);
+    }
+    .session-actions button:hover {
+        background: #ff6f7d; color: #201f1f;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.65);
+    }
+
+    /* CTA box (buttons centered) */
+    .session-cta-box {
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        margin-top: 8px;
+        padding: 8px;
+        border-radius: 8px;
+        background: #242424;
+        border: 1px dashed #3b3b3b;
+    }
+
+    /* Dropdown of tabs inside a session */
+    .tab-list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+    .tab-list.is-collapsed { display: none; }
+    .tab-row { display: block; }
+    .tab-title {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 260px;
+    }
+
+    /* Feature Tabs */
+    .feature-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 12px 8px; }
+    .feature-tabs .tab {
+        background: #2a2929; color: #fff; border-radius: 10px;
+        padding: 8px 12px; font-weight: 600; cursor: pointer; text-align: center;
+        border: 1px solid #3a3939;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.35);
+    }
+    .feature-tabs .tab.active {
+        background: #ff6f7d; color: #201f1f; border-color: #ff6f7d;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.65);
+    }
+
+    /* Views */
+    .view { margin-top: 4px; }
+    .is-hidden { display: none !important; }
+
+    /* Highlights UI */
+    .hl-input {
+        width: calc(100% - 24px);
+        background: #2a2929; color: #fff; border: 1px solid #3a3939; border-radius: 10px;
+        padding: 10px; resize: vertical; min-height: 84px; outline: none;
+    }
+    .hl-item { background: #2a2929; border: 1px solid #3a3939; border-radius: 10px; padding: 10px; }
+    .hl-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .hl-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .hl-actions { display: flex; gap: 6px; }
+    .hl-actions button {
+        background: transparent; color: #ff6f7d; border-radius: 8px; padding: 6px 10px; cursor: pointer;
+        border: 1px solid #ff6f7d;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.35);
+    }
+    .hl-actions button:hover {
+        background: #ff6f7d; color: #201f1f;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.65);
+    }
